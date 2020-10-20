@@ -1,0 +1,7 @@
+{
+  "home": 0,
+  "createCharacter": 1,
+  "fight": 2,
+  "settings": 3,
+  "multiplayer": 4
+}
