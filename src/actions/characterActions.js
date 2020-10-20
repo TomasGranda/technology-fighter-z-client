@@ -11,11 +11,13 @@ import {
   CLEAR_SELECTION
 } from "./types";
 
+const url = "https://technology-fighters-z.herokuapp.com";
+
 export const getCharacters = () => dispatch => {
   dispatch(setCharactersLoading());
 
   axios
-    .get("/api/characters")
+    .get(url + "/api/characters")
     .then(res =>
       dispatch({
         type: GET_CHARACTERS,
@@ -47,7 +49,7 @@ export const unselectCharacter = characterId => dispatch => {
 export const addCharacter = character => dispatch => {
   dispatch(clearErrors());
   axios
-    .post("/api/characters", character)
+    .post(url + "/api/characters", character)
     .then(res =>
       dispatch({
         type: ADD_CHARACTER,
