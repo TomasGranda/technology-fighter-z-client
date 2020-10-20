@@ -21,7 +21,7 @@ class SelectionView extends Component {
     const { characters, loading } = this.props.character;
     let content;
 
-    if (characters === null || loading) {
+    if (characters === null || characters === undefined || loading) {
       content = (
         <ElementCenter>
           <Spinner src={ImgSpinner} width="80px" />
