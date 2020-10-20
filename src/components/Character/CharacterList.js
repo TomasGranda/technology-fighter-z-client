@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 import CharacterCard from "./CharacterCard";
 
 const CharacterList = props => {
-  const characters = <div></div>;
+  let characters = <div></div>;
   if(props.characters.length > 0){
     characters = props.characters.map((character, i) => {
       return (
