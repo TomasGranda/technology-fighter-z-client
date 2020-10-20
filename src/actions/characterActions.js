@@ -18,17 +18,21 @@ export const getCharacters = () => dispatch => {
 
   axios
     .get(url + "/api/characters")
-    .then(res =>
+    .then(res =>{
+      console.log("pepe")
+      console.log(res);
       dispatch({
         type: GET_CHARACTERS,
         payload: res.data
-      })
+      })}
     )
-    .catch((err) =>
+    .catch((err) =>{
+      console.log("pepe2")
+      console.log(err);
       dispatch({
         type: GET_CHARACTERS,
         payload: err.response
-      })
+      });}
     );
 };
 
@@ -51,16 +55,23 @@ export const addCharacter = character => dispatch => {
   axios
     .post(url + "/api/characters", character)
     .then(res =>
+      {
+        console.log("pepe")
+        console.log(res);
+  
       dispatch({
         type: ADD_CHARACTER,
         payload: res.data
-      })
+      })}
     )
-    .catch(err =>
+    .catch(err =>{
+      console.log("pepe2")
+      console.log(res);
+
       dispatch({
         type: GET_ERRORS,
         payload: err.response
-      })
+      })}
     );
 };
 
