@@ -66,7 +66,7 @@ export const addCharacter = character => dispatch => {
     )
     .catch(err =>{
       console.log("pepe2")
-      console.log(res);
+      console.log(err);
 
       dispatch({
         type: GET_ERRORS,
