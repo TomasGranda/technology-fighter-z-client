@@ -36,7 +36,7 @@ const NavbarApp = props => {
           <NavItem eventKey={3} href="#" onClick={setSettings}>
             Settings
           </NavItem>
-          <NavItem eventKey={4} href="#" onClick={setMultiplayer}>
+          <NavItem eventKey={4} href="#" onClick={setMultiplayer} disabled>
             Multiplayer
           </NavItem>
         </Nav>
