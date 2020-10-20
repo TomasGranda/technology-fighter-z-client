@@ -27,7 +27,7 @@ export const getCharacters = () => dispatch => {
     .catch((err) =>
       dispatch({
         type: GET_CHARACTERS,
-        payload: err
+        payload: err.response
       })
     );
 };
@@ -59,7 +59,7 @@ export const addCharacter = character => dispatch => {
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
-        payload: err
+        payload: err.response
       })
     );
 };
