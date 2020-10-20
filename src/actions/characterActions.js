@@ -11,7 +11,7 @@ import {
   CLEAR_SELECTION
 } from "./types";
 
-const url = "https://technology-fighters-z.herokuapp.com";
+const url = "https://technology-fighters-z-api.herokuapp.com";
 
 export const getCharacters = () => dispatch => {
   dispatch(setCharactersLoading());
